@@ -2,50 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alicia Grant Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alicia's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: "Arial", sans-serif;
-      background-color: #0f0f0f;
+      font-family: 'Inter', sans-serif;
+      background-color: #0e0e0e;
       color: white;
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1em 2em;
-      border-bottom: 1px solid #2c2c2c;
+      text-align: center;
+      padding: 3em 1em 1em;
     }
 
-    nav a {
-      margin-left: 1.5em;
-      color: #00aaff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .intro {
-      padding: 2em;
-      text-align: left;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .intro h1 {
+    header h1 {
       font-size: 2.5em;
       margin-bottom: 0.2em;
     }
 
-    .intro span {
-      color: #00aaff;
+    header p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .highlight {
+      color: #44ccff;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: 1fr 1fr;
       gap: 1.5em;
       padding: 2em;
       max-width: 1000px;
@@ -53,121 +43,74 @@
     }
 
     .card {
-      padding: 1em;
-      border-radius: 15px;
+      border-radius: 12px;
+      padding: 1.5em;
       color: white;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       min-height: 180px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
-    .blue { background-color: #417eff; }
-    .purple { background-color: #d86de4; }
-    .orange { background-color: #f69256; }
-    .pink { background-color: #ff94b6; }
+    .blue { background-color: #4a6cff; }
+    .purple { background-color: #ce62dc; }
+    .orange { background-color: #ffa35c; }
+    .pink { background-color: #ff7f9c; }
 
-    .card h3 {
-      margin: 0.5em 0 0;
+    .card h2 {
+      margin: 0 0 0.4em;
+      font-size: 1.25em;
     }
 
     .card p {
-      margin-top: 0.3em;
-      font-size: 0.9em;
-      font-style: italic;
-    }
-
-    .about {
-      background-color: #5fc4ff;
-      border-radius: 15px;
-      padding: 2em;
-      margin: 2em auto;
-      max-width: 1000px;
-      color: black;
-    }
-
-    .about p {
-      line-height: 1.5;
-    }
-
-    .buttons {
-      margin-top: 1em;
-    }
-
-    .buttons a {
-      display: inline-block;
-      background: white;
-      color: black;
-      padding: 0.5em 1em;
-      margin-right: 1em;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
+      font-size: 0.95em;
+      line-height: 1.4;
     }
 
     footer {
       text-align: center;
-      padding: 1em;
-      font-size: 0.8em;
-      color: #ccc;
+      font-style: italic;
+      font-size: 0.9em;
+      margin: 3em 0 1em;
+      color: #aaa;
     }
 
-    footer i {
-      font-style: italic;
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div><img src="your-logo.png" alt="Logo" height="30" /></div>
-    <nav>
-      <a href="#">portfolio</a>
-      <a href="#">archives</a>
-      <a href="#">about</a>
-      <a href="#">resume</a>
-    </nav>
+    <h1>hello! i’m alicia</h1>
+    <p>I am a UI/UX designer <em>psyched</em> to bring pops of <span class="highlight">color</span> to a user-centered world.</p>
   </header>
 
-  <section class="intro">
-    <h1>hello! i’m alicia</h1>
-    <p>I am a UI/UX designer <em>psyched</em> to bring pops of <span>color</span> to a user-centered world.</p>
-  </section>
-
-  <section class="grid">
+  <main class="grid">
     <div class="card blue">
-      <h3>dance marathon</h3>
-      <p>2024 - envision how miracle makers and captains for dance marathon track their fundraising goals.</p>
+      <h2>dance marathon</h2>
+      <p><strong>2024</strong> - envision how miracle makers and captains for dance marathon track their fundraising goals.</p>
     </div>
     <div class="card purple">
-      <h3>ourhouse redesign</h3>
-      <p>2024 - explore the redesign of ourhouse — an app keeping sorority women up to date on their chapter.</p>
+      <h2>ourhouse redesign</h2>
+      <p><strong>2024</strong> - explore the redesign of ourhouse — an app keeping sorority women up to date on their chapter.</p>
     </div>
     <div class="card orange">
-      <h3>classcaddy</h3>
-      <p>2024 - manage your time on your school’s schedule with the mobile application classcaddy.</p>
+      <h2>classcaddy</h2>
+      <p><strong>2024</strong> - manage your time on your school’s schedule with the mobile application classcaddy.</p>
     </div>
     <div class="card pink">
-      <h3>VR</h3>
-      <p>adolescent vr research <br> 2025 - coming soon!</p>
+      <h2>VR</h2>
+      <p><strong>2025</strong> - adolescent vr research – coming soon!</p>
     </div>
-  </section>
-
-  <section class="about">
-    <h2>about me</h2>
-    <p>I am a third-year <strong>Computer Science</strong> student at the University of Florida with an interdisciplinary focus in <strong>Psychology</strong>, aspiring to grow in user experience design and product management. My goal is to enhance my UI/UX, technical, and product strategy skill sets through meaningful opportunities.</p>
-    <p>The “skip intro” button, after hours of binge-watching TV, sparked more than just a moment of appreciation—it was a realization. This small feature inspired me to pursue UX design, showing me how impactful and thoughtful design can improve everyday experiences. Now, I’m dedicated to making strides in a field where I can blend technology, creativity, and empathy.</p>
-    <p>Outside of my academic pursuits, I enjoy reading, writing music, and spending quality time with my little sister and friends.</p>
-    <div class="buttons">
-      <a href="#">linkedin</a>
-      <a href="#">resume</a>
-      <a href="#">email</a>
-    </div>
-  </section>
+  </main>
 
   <footer>
-    <i>thanks for dropping in!</i><br>© 2025 alicia grant
+    thanks for dropping in! &nbsp; &copy; 2025 alicia grant
   </footer>
 
 </body>

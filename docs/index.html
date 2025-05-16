@@ -1,23 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Coming Soon</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alicia Grant Portfolio</title>
   <style>
     body {
       margin: 0;
-      height: 100vh;
-      background-color: pink;
+      font-family: "Arial", sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      border-bottom: 1px solid #2c2c2c;
+    }
+
+    nav a {
+      margin-left: 1.5em;
+      color: #00aaff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .intro {
+      padding: 2em;
+      text-align: left;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .intro h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+
+    .intro span {
+      color: #00aaff;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5em;
+      padding: 2em;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      padding: 1em;
+      border-radius: 15px;
       color: white;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Arial, sans-serif;
-      font-size: 3em;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 180px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .blue { background-color: #417eff; }
+    .purple { background-color: #d86de4; }
+    .orange { background-color: #f69256; }
+    .pink { background-color: #ff94b6; }
+
+    .card h3 {
+      margin: 0.5em 0 0;
+    }
+
+    .card p {
+      margin-top: 0.3em;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+
+    .about {
+      background-color: #5fc4ff;
+      border-radius: 15px;
+      padding: 2em;
+      margin: 2em auto;
+      max-width: 1000px;
+      color: black;
+    }
+
+    .about p {
+      line-height: 1.5;
+    }
+
+    .buttons {
+      margin-top: 1em;
+    }
+
+    .buttons a {
+      display: inline-block;
+      background: white;
+      color: black;
+      padding: 0.5em 1em;
+      margin-right: 1em;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.8em;
+      color: #ccc;
+    }
+
+    footer i {
+      font-style: italic;
     }
   </style>
 </head>
 <body>
-  Coming soon!
+
+  <header>
+    <div><img src="your-logo.png" alt="Logo" height="30" /></div>
+    <nav>
+      <a href="#">portfolio</a>
+      <a href="#">archives</a>
+      <a href="#">about</a>
+      <a href="#">resume</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h1>hello! i’m alicia</h1>
+    <p>I am a UI/UX designer <em>psyched</em> to bring pops of <span>color</span> to a user-centered world.</p>
+  </section>
+
+  <section class="grid">
+    <div class="card blue">
+      <h3>dance marathon</h3>
+      <p>2024 - envision how miracle makers and captains for dance marathon track their fundraising goals.</p>
+    </div>
+    <div class="card purple">
+      <h3>ourhouse redesign</h3>
+      <p>2024 - explore the redesign of ourhouse — an app keeping sorority women up to date on their chapter.</p>
+    </div>
+    <div class="card orange">
+      <h3>classcaddy</h3>
+      <p>2024 - manage your time on your school’s schedule with the mobile application classcaddy.</p>
+    </div>
+    <div class="card pink">
+      <h3>VR</h3>
+      <p>adolescent vr research <br> 2025 - coming soon!</p>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>about me</h2>
+    <p>I am a third-year <strong>Computer Science</strong> student at the University of Florida with an interdisciplinary focus in <strong>Psychology</strong>, aspiring to grow in user experience design and product management. My goal is to enhance my UI/UX, technical, and product strategy skill sets through meaningful opportunities.</p>
+    <p>The “skip intro” button, after hours of binge-watching TV, sparked more than just a moment of appreciation—it was a realization. This small feature inspired me to pursue UX design, showing me how impactful and thoughtful design can improve everyday experiences. Now, I’m dedicated to making strides in a field where I can blend technology, creativity, and empathy.</p>
+    <p>Outside of my academic pursuits, I enjoy reading, writing music, and spending quality time with my little sister and friends.</p>
+    <div class="buttons">
+      <a href="#">linkedin</a>
+      <a href="#">resume</a>
+      <a href="#">email</a>
+    </div>
+  </section>
+
+  <footer>
+    <i>thanks for dropping in!</i><br>© 2025 alicia grant
+  </footer>
+
 </body>
 </html>

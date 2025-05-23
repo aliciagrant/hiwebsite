@@ -78,6 +78,11 @@
       justify-content: space-between;
       min-height: 180px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
     }
 
     .blue { background-color: #4a6cff; }
@@ -106,7 +111,6 @@
       box-sizing: border-box;
     }
 
-    /* Responsive for small screens */
     @media (max-width: 700px) {
       .grid {
         grid-template-columns: 1fr;
@@ -153,16 +157,16 @@
       margin: 3em 0 1em;
       color: #aaa;
     }
+
+    a.card-link {
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="#portfolio">portfolio</a>
-    <a href="#archives">archives</a>
-    <a href="#about">about</a>
-    <a href="https://drive.google.com/file/d/1CUaLtpPIA1BPl0_8W_Lb0jv9yHdyvlZW/view?usp=drive_link" target="_blank">resume</a>
-  </nav>
+  <!-- Reusable nav include -->
+  <div id="nav-container"></div>
 
   <header>
     <h1>hello! i’m alicia</h1>
@@ -170,32 +174,37 @@
   </header>
 
   <main class="grid" id="portfolio">
-    <div class="card blue">
-      <h2>dance marathon</h2>
-      <p><strong>2024</strong> – envision how miracle makers and captains for dance marathon track their fundraising goals.</p>
-    </div>
-    <div class="card purple">
-      <h2>ourhouse redesign</h2>
-      <p><strong>2024</strong> – explore the redesign of ourhouse — an app keeping sorority women up to date on their chapter.</p>
-    </div>
-    <div class="card orange">
-      <h2>classcaddy</h2>
-      <p><strong>2024</strong> – manage your time on your school’s schedule with the mobile application classcaddy.</p>
-    </div>
-    <div class="card pink">
-      <h2>VR</h2>
-      <p><strong>2025</strong> – adolescent vr research – coming soon!</p>
-    </div>
+    <a href="dancemarathon.html" class="card-link">
+      <div class="card blue">
+        <h2>dance marathon</h2>
+        <p><strong>2024</strong> – envision how miracle makers and captains for dance marathon track their fundraising goals.</p>
+      </div>
+    </a>
+    <a href="ourhouse.html" class="card-link">
+      <div class="card purple">
+        <h2>ourhouse redesign</h2>
+        <p><strong>2024</strong> – explore the redesign of ourhouse — an app keeping sorority women up to date on their chapter.</p>
+      </div>
+    </a>
+    <a href="classcaddy.html" class="card-link">
+      <div class="card orange">
+        <h2>classcaddy</h2>
+        <p><strong>2024</strong> – manage your time on your school’s schedule with the mobile application classcaddy.</p>
+      </div>
+    </a>
+    <a href="vr.html" class="card-link">
+      <div class="card pink">
+        <h2>VR</h2>
+        <p><strong>2025</strong> – adolescent vr research – coming soon!</p>
+      </div>
+    </a>
   </main>
 
   <section class="about-section" id="about">
     <h2>about me</h2>
     <p>I am a third-year <strong>Computer Science</strong> student at the University of Florida with an interdisciplinary focus in <strong>Psychology</strong>, aspiring to grow in user experience design and product management. My goal is to enhance my UI/UX, technical, and product strategy skill sets through meaningful opportunities.</p>
-
     <p>The "skip intro" button, after hours of binge-watching TV, sparked more than just a moment of appreciation—it was a realization. This small feature inspired me to pursue UX design, showing me how impactful and thoughtful design can improve everyday experiences. Now, I'm dedicated to making strides in a field where I can blend technology, creativity, and empathy.</p>
-
     <p>Outside of my academic pursuits, I enjoy reading, writing music, and spending quality time with my little sister and friends.</p>
-
     <div class="buttons">
       <a href="https://www.linkedin.com/in/alicia-f-grant/" target="_blank">linkedin</a>
       <a href="https://drive.google.com/file/d/1CUaLtpPIA1BPl0_8W_Lb0jv9yHdyvlZW/view?usp=drive_link" target="_blank">resume</a>
@@ -206,6 +215,15 @@
   <footer>
     thanks for dropping in! &nbsp; &copy; 2025 alicia grant
   </footer>
+
+  <script>
+    // Load reusable nav.html into nav-container
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('nav-container').innerHTML = html;
+      });
+  </script>
 
 </body>
 </html>
